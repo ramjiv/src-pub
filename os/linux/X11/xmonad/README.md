@@ -62,20 +62,23 @@ myTerminal = "sakura"
 screenSaver = "xscreensaver -nosplash"
 xmobar_upper = "xmobar ~/.xmonad/xmobar-upper.config"
 xmobar_lower = "xmobar ~/.xmonad/xmobar.config"
+```
+
 ## Pre-requisites
 
 You will need the following to be installed:
 
 ```
-xmonad
-sakura
-xmobar
+xmonad  - https://xmonad.org/documentation.html
+xmobar  - https://xmobar.org/
+sakura  - http://troubleshooters.com/linux/sakura.htm
 xscreensaver
-Font: Fira Code
+Font: Fira Code - Use the nerdfont version - https://github.com/ryanoasis/nerd-fonts
+scrot   
 ```
 
 
-## keybindings for xmonad window manager
+## A way to remmber the keybindings for xmonad window manager
 
 I'm genuinely not sure how many of these actually work well, so I'll go through and do an edit at some point, but until then this excellent image was found on the [haskell wiki](https://wiki.haskell.org/wikiupload/b/b8/Xmbindings.png).
 
