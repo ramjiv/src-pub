@@ -1,8 +1,8 @@
-# XMonad Setup
+# XMonad like a boss. Or how I learned to love my old computers.
 
 ## TL;DR
 
-XMonad is a tiling window manager that's both incredibly stable, uses the minimum amount of system resources and is driven by keyboard allowing you to actually get shit done in a highly productive manner.
+XMonad is a tiling window manager that's both incredibly stable, uses the minimum amount of system resources and is driven by keyboard allowing you to actually get shit done in a highly productive manner. This means that old computers never become useless, they just become xmonad hosts. 
 
 It is, however, in its default setting both unattractive and intimidating and requires me to remember continually how I set it up in the first place.
 
@@ -17,10 +17,11 @@ In short:
 * Printscreen will start 'scrot' a screen capture utility. I never use this, so it's not a 'prerequisite'.
 * Beyond that the usual Xmonad shortcut keys will do their things
 
+**Warning**: Once you go xmonad - you spend your whole life going 'weh? what was that combo to push the window back into the tiling format again?'. See the keybindings at the end of this readme
 
 ## Breakdown of what's happening
 I'm sure I don't need all of these, probably opening these in a haskell aware IDE will make half of these imports not be required.
-```
+```haskell
 import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -30,14 +31,14 @@ import System.IO
 ```
 
 Kickoff the main flow and immediately spawn the xmobar process
-```
+```haskell
 main = do   
     xmproc <- spawnPipe "xmobar -f \"xft:'Fira Code'-12\""
     spawn $ xmobar_lower
 ```
 There are *two* xmobar bars, one a the top and one at the bottom.
 
-```
+```haskell
     xmonad $ docks def
         { layoutHook = avoidStruts  $  layoutHook def
         , logHook = dynamicLogWithPP xmobarPP
@@ -48,7 +49,7 @@ There are *two* xmobar bars, one a the top and one at the bottom.
 The above section takes the output from logfiles and puts it into the xmobar output. Kinda useful.
 
 Then we get onto the shortcut keys
-```
+```haskell
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
@@ -57,7 +58,7 @@ Then we get onto the shortcut keys
         , ((0, xK_Print), spawn "scrot")
         ]
 ```
-```
+```haskell
 myTerminal = "sakura"
 screenSaver = "xscreensaver -nosplash"
 xmobar_upper = "xmobar ~/.xmonad/xmobar-upper.config"
@@ -68,17 +69,20 @@ xmobar_lower = "xmobar ~/.xmonad/xmobar.config"
 
 You will need the following to be installed:
 
+* [xmonad](https://xmonad.org/documentation.html) - use the version in apt
+* [xmobar] (https://xmobar.org/) - use the version in apt
+* [sakura](http://troubleshooters.com/linux/sakura.htm) - use the apt version but just in case.
+* [Font: Fira Code - Use the nerdfont version](https://github.com/ryanoasis/nerd-fonts)
+* xscreensaver - use the version in apt
+* scrot - I'm sure it's in apt   
+
+For the lazy (i.e. me):
 ```
-xmonad  - https://xmonad.org/documentation.html
-xmobar  - https://xmobar.org/
-sakura  - http://troubleshooters.com/linux/sakura.htm
-xscreensaver
-Font: Fira Code - Use the nerdfont version - https://github.com/ryanoasis/nerd-fonts
-scrot   
+# apt-get install xmonad xmobar sakura xscreensaver scrot
 ```
 
 
-## A way to remmber the keybindings for xmonad window manager
+## Remembering Keybindings is Hard.
 
 I'm genuinely not sure how many of these actually work well, so I'll go through and do an edit at some point, but until then this excellent image was found on the [haskell wiki](https://wiki.haskell.org/wikiupload/b/b8/Xmbindings.png).
 
