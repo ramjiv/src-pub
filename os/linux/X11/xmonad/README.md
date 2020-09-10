@@ -40,7 +40,7 @@ main = do
 ```
 There are *two* xmobar bars, one a the top and one at the bottom. 
 
-- [x] I'm reasonably sure there's a bug here - in that the xmproc *should* be using the ```xmobar_upper``` variable but isn't correctly. *TODO*
+- [ ] **TODO**: the ```xmproc <- spawnPipe ``` *should* be using the ```xmobar_upper``` variable but isn't correctly.
 
 ```haskell
     xmonad $ docks def
