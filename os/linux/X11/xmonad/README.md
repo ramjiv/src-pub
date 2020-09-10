@@ -38,7 +38,8 @@ main = do
     xmproc <- spawnPipe "xmobar -f \"xft:'Fira Code'-12\""
     spawn $ xmobar_lower
 ```
-There are *two* xmobar bars, one a the top and one at the bottom.
+There are *two* xmobar bars, one a the top and one at the bottom. 
+[] I'm reasonably sure there's a bug here - in that the xmproc *should* be using the ```xmobar_upper``` variable but isn't corretly. TODO.
 
 ```haskell
     xmonad $ docks def
