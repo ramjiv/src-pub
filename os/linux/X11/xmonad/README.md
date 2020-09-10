@@ -21,6 +21,7 @@ In short:
 
 ## Breakdown of what's happening
 I'm sure I don't need all of these, probably opening these in a haskell aware IDE will make half of these imports not be required.
+
 ```haskell
 import XMonad
 import XMonad.Hooks.DynamicLog
@@ -31,6 +32,7 @@ import System.IO
 ```
 
 Kickoff the main flow and immediately spawn the xmobar process
+
 ```haskell
 main = do   
     xmproc <- spawnPipe "xmobar -f \"xft:'Fira Code'-12\""
@@ -70,14 +72,14 @@ xmobar_lower = "xmobar ~/.xmonad/xmobar.config"
 You will need the following to be installed:
 
 * [xmonad](https://xmonad.org/documentation.html) - use the version in apt
-* [xmobar] (https://xmobar.org/) - use the version in apt
+* [xmobar](https://xmobar.org/) - use the version in apt
 * [sakura](http://troubleshooters.com/linux/sakura.htm) - use the apt version but just in case.
 * [Font: Fira Code - Use the nerdfont version](https://github.com/ryanoasis/nerd-fonts)
 * xscreensaver - use the version in apt
 * scrot - I'm sure it's in apt   
 
 For the lazy (i.e. me):
-```
+```bash
 # apt-get install xmonad xmobar sakura xscreensaver scrot
 ```
 
