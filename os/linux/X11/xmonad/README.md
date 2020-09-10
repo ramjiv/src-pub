@@ -82,6 +82,6 @@ scrot
 
 I'm genuinely not sure how many of these actually work well, so I'll go through and do an edit at some point, but until then this excellent image was found on the [haskell wiki](https://wiki.haskell.org/wikiupload/b/b8/Xmbindings.png).
 
-![Local copy in case of the apocalypse]("Xmbindings.png")
+![Local copy in case of the apocalypse](Xmbindings.png)
 
 
