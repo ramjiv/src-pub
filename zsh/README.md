@@ -2,6 +2,8 @@
 
 Zsh has some rather extreme and beautiful configuration options. This is by far no means a complete explanation or even a correct one - however there is a pretty decent zsh environment currently under my fingertips.
 
+![And it looks like this...](zsh-iterm-exa.png)
+
 In general, I have run the brew-install documented elsewhere in this repo beforehand.
 
 
