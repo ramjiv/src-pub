@@ -7,8 +7,9 @@ PATH=/bin:/usr/bin:/usr/local/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.local/bin
 export PATH
 
 ## homebrew
-brew install golang wget awscli firebase-cli git jq mutt neovim openjdk powerline-go python starship \ 
- svn vim jsonlint node npm exa fzf tmux youtube-dl direnv jump autoenv bat
+brew install golang wget awscli firebase-cli git jq mutt neovim openjdk powerline-go python starship 
+brew install procs sd dust tokei clementtsang/bottom/bottom tealdeer bandwhich grex svn vim jsonlint node npm exa fzf
+brew install tmux youtube-dl direnv jump autoenv bat ripgrep fd diskus hexyl insect rmlint
 
 # OMFG - bat is lifechanging
 # https://github.com/sharkdp/bat
